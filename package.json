@@ -1,0 +1,49 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugo-cardenas/personal-website.git"
+  },
+  "keywords": [
+    "personal",
+    "website"
+  ],
+  "author": "Hugo Cardenas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugo-cardenas/personal-website/issues"
+  },
+  "homepage": "https://github.com/hugo-cardenas/personal-website#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.18.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-merge": "^4.1.0"
+  },
+  "scripts": {
+    "build": "webpack --config ./config/webpack.prod.js",
+    "deploy": "npm run build && aws s3 sync dist s3://hugocardenas.me --exclude '.DS_Store' --delete",
+    "start": "webpack-dev-server --open --config ./config/webpack.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "normalize.css": "^7.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-linkifier": "^3.1.1"
+  }
+}

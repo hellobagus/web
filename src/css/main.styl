@@ -1,0 +1,48 @@
+background-color = #02161d
+text-color = #829395
+prompt-color = #d93435
+
+html
+    background-color: background-color
+    height: 100%
+
+body
+    height: 100%
+
+#root
+    margin-top: 30px
+    margin-left: 20px
+
+terminal-font()
+    color: text-color
+    font-family: monaco, Consolas, 'Lucida Console', monospace
+    font-size: 13px
+    line-height: 18px
+
+comic-font()
+    font-family: 'Comic Sans MS'
+    font-size: 15px
+
+#terminal
+    pre
+        display: inline-block
+    pre, label, input, a
+        margin: 0
+        padding: 0
+        terminal-font()
+    pre.comic-font
+        comic-font()
+    ul
+        margin: 0
+        padding: 0
+    li
+        list-style: none
+    ul, li
+        margin-bottom: 2px
+    .cli-input
+        padding: 0
+        border: none
+        outline: none
+        background: transparent
+    .prompt
+        color: prompt-color
